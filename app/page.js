@@ -1,113 +1,158 @@
 import Image from "next/image";
+import Card from "./components/card";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="relative min-h-screen bg-[#e6d4cc] border border-black">
+      <div className="w-full h-fit p-2 sticky flex flex-row bg-[#8a5338]">
+        <img className="w-10 h-10 mx-2" src="/images/logo.png" alt="Logo" />
+        <input
+          type="search"
+          name="cari"
+          id="cari"
+          className="bg-transparent rounded border-white grow mx-2"
+        />
+        <button className="w-10 h-10 mx-2">
+          <img className="w-fit h-fit" src="/images/keranjang.png" alt="" />
+        </button>
+        <button
+          className="bg-transparent text-white text-4xl"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          <i className="bi bi-list"></i>
+        </button>
+        <div className="collapse" id="collapseExample">
+          <div className="fixed top-10 right-0">
+            Some placeholder content for the collapse component. This panel is
+            hidden by default but revealed when the user activates the relevant
+            trigger.
+          </div>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div id="carouselExampleCaptions" className="carousel slide">
+        <div className="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            className="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img
+              src="/images/Gambar slide 1.jpg"
+              className="d-block w-100"
+              alt="..."
+            />
+            <div className="carousel-caption bg-black opacity-70 d-block d-md-block">
+              <h5>Pusat oleh-oleh Cendera Mata Asli Kalimantan Timur</h5>
+              <p>100% Buatan Lokal</p>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <img
+              src="/images/Gambar slide 2.jpg"
+              className="d-block w-100"
+              alt="..."
+            />
+            <div className="carousel-caption bg-black opacity-70 d-block d-md-block">
+              <h5>Dari pengrajin untuk anda</h5>
+              <p>100% Buatan Lokal</p>
+            </div>
+          </div>
+        </div>
+        <button
+          className="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button
+          className="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
+        </button>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="grid grid-cols-3 gap-4 p-4 mb-24">
+        <Card
+          sourceGambarProduk="/images/Produk/1.png"
+          hargaProduk="Rp. 115.000"
+          namaProduk="Keranjang Rotan Motif"
+        ></Card>
+        <Card
+          sourceGambarProduk="/images/Produk/2.png"
+          hargaProduk="Rp. 355.000"
+          namaProduk="Tas Manik"
+        ></Card>
+        <Card
+          sourceGambarProduk="/images/Produk/3.png"
+          hargaProduk="Rp. 250.000"
+          namaProduk="Kain Batik Daerah"
+        ></Card>
+        <Card
+          sourceGambarProduk="/images/Produk/4.png"
+          hargaProduk="Rp. 325.000"
+          namaProduk="Baju Batik Daerah"
+        ></Card>
+        <Card
+          sourceGambarProduk="/images/Produk/5.png"
+          hargaProduk="Rp. 2.400.000"
+          namaProduk="Gitar Motif Batik"
+        ></Card>
+        <Card
+          sourceGambarProduk="/images/Produk/6.png"
+          hargaProduk="Rp. 75.000"
+          namaProduk="Kalung Manik"
+        ></Card>
       </div>
+      <nav className="w-full p-2 flex flex-row justify-around fixed bottom-5 rounded-full left-0 bg-[#3f2716] text-white">
+        <a href="#" className="grid justify-items-center hover:opacity-50">
+          <img src="/images/Nav/buat kamu.png" className="w-8 h-auto" />
+          Buat Kamu
+        </a>
+        <a href="#" className="grid justify-items-center hover:opacity-50">
+          <img src="/images/Nav/whistlist.png" className="w-8 h-auto" />
+          Wishlist
+        </a>
+        <a href="#" className="grid justify-items-center hover:opacity-50">
+          <img src="/images/Nav/home.png" className="w-7 h-auto" />
+          Home
+        </a>
+        <a href="#" className="grid justify-items-center hover:opacity-50">
+          <img src="/images/Nav/notifikasi.png" className="w-7 h-auto" />
+          Notifikasi
+        </a>
+        <a href="#" className="grid justify-items-center hover:opacity-50">
+          <img src="/images/Nav/saya.png" className="w-5 h-auto" />
+          Saya
+        </a>
+      </nav>
     </main>
   );
 }
