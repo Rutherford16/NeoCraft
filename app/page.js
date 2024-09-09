@@ -34,8 +34,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Carousel/>
-      <div className="grid grid-cols-3 gap-4 p-4 mb-24">
+      <Carousel />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 mb-24">
         <Card
           sourceGambarProduk="/images/Produk/1.png"
           hargaProduk="Rp. 115.000"
