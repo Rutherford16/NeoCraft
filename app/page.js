@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Card from "./components/card";
 import Carousel from "./components/carousel";
+import dataProduct from "./json/data-product.json";
 
 export default function Home() {
   return (
@@ -36,36 +37,16 @@ export default function Home() {
       </div>
       <Carousel />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 mb-24">
-        <Card
-          sourceGambarProduk="/images/Produk/1.png"
-          hargaProduk="Rp. 115.000"
-          namaProduk="Keranjang Rotan Motif"
-        ></Card>
-        <Card
-          sourceGambarProduk="/images/Produk/2.png"
-          hargaProduk="Rp. 355.000"
-          namaProduk="Tas Manik"
-        ></Card>
-        <Card
-          sourceGambarProduk="/images/Produk/3.png"
-          hargaProduk="Rp. 250.000"
-          namaProduk="Kain Batik Daerah"
-        ></Card>
-        <Card
-          sourceGambarProduk="/images/Produk/4.png"
-          hargaProduk="Rp. 325.000"
-          namaProduk="Baju Batik Daerah"
-        ></Card>
-        <Card
-          sourceGambarProduk="/images/Produk/5.png"
-          hargaProduk="Rp. 2.400.000"
-          namaProduk="Gitar Motif Batik"
-        ></Card>
-        <Card
-          sourceGambarProduk="/images/Produk/6.png"
-          hargaProduk="Rp. 75.000"
-          namaProduk="Kalung Manik"
-        ></Card>
+        {Array.isArray(dataProduct) &&
+          dataProduct.map((data, key) => (
+            <Card
+              key={key}
+              sourceGambarProduk={data.sourceGambarProduct}
+              hargaProduk={"Rp. " + data.hargaProduct}
+              namaProduk={data.namaProduct}
+              id = {data.id}
+            ></Card>
+          ))}
       </div>
       <nav className="w-full p-2 flex flex-row justify-around fixed bottom-5 rounded-full left-0 bg-[#3f2716] text-white">
         <a href="#" className="grid justify-items-center hover:opacity-50">
