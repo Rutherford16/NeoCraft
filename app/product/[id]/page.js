@@ -44,6 +44,39 @@ export default function Product({ params: { id } }) {
           height={0}
           alt="{namaProduk}"
         />
+        <div className="flex flex-row justify-between items-center px-3">
+          <div className="">
+            <h3 className="text-lg font-bold">{data.namaProduct}</h3>
+            Rp. {data.hargaProduct}
+          </div>
+          <div className="">
+            <button className="py-2 px-4 bg-[#8a5338] rounded-lg text-white">Beli Sekarang</button>
+          </div>
+        </div>
+        <div className="px-3">
+          <h3 className="text-lg font-bold">Ukuran</h3>
+          <div className="flex flex-row justify-between">
+            <button className="py-2 px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
+              S
+            </button>
+            <button className="py-2 px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
+              M
+            </button>
+            <button className="py-2 px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
+              L
+            </button>
+            <button className="py-2 px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
+              XL
+            </button>
+            <button className="py-2 px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
+              XXL
+            </button>
+          </div>
+        </div>
+        <div className="px-3">
+          <h3 className="text-lg font-bold">Deskripsi</h3>
+          <p className="text-justify">{data.deskripsiProduct}</p>
+        </div>
       </div>
     </main>
   );
