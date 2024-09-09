@@ -1,23 +1,24 @@
 import Image from "next/image";
 import dataProduct from "../../json/data-product.json";
+import Link from "next/link";
 
 export default function Product({ params: { id } }) {
   const data = dataProduct.find((p) => p.id.toString() === id) || {};
 
   return (
     <main className="relative min-h-screen bg-[#e6d4cc] border border-black">
-      <div className="w-full h-fit p-2 fixed top-0 flex flex-row justify-between bg-transparent text-white">
+      <div className="w-full h-fit p-2 fixed top-3 flex flex-row justify-between items-center bg-transparent text-white">
         <div>
-          <button className="w-10 h-10 rounded-full mx-2 bg-[#8a5338]">
+          <Link href={"/"} className="rounded-full py-2 px-2.5 bg-[#8a5338] text-4xl">
             <i className="bi bi-arrow-left"></i>
-          </button>
+          </Link>
         </div>
         <div>
-          <button className="w-10 h-10 p-2 rounded-full mx-2 bg-[#8a5338]">
+          <button className="w-14 h-auto p-3 rounded-full mr-2 bg-[#8a5338]">
             <img className="w-fit h-fit" src="/images/keranjang.png" alt="" />
           </button>
           <button
-            className="w-10 h-10 rounded-full bg-[#8a5338] text-4xl"
+            className="p-2 rounded-full bg-[#8a5338] text-4xl"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseExample"
@@ -44,13 +45,20 @@ export default function Product({ params: { id } }) {
           height={0}
           alt="{namaProduk}"
         />
+        <div className="flex flex-row justify-between items-center px-3 bg-[#8a5338] rounded-full text-white">
+          <div>Deskripsi</div>
+          <img className="w-10 h-auto" src="/images/keranjang.png" alt="" />
+          <div>Review</div>
+        </div>
         <div className="flex flex-row justify-between items-center px-3">
           <div className="">
             <h3 className="text-lg font-bold">{data.namaProduct}</h3>
             Rp. {data.hargaProduct}
           </div>
           <div className="">
-            <button className="py-2 px-4 bg-[#8a5338] rounded-lg text-white">Beli Sekarang</button>
+            <button className="py-2 px-4 bg-[#8a5338] rounded-lg text-white">
+              Beli Sekarang
+            </button>
           </div>
         </div>
         <div className="px-3">
