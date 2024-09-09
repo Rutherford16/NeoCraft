@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Card from "./components/card";
+import Carousel from "./components/carousel";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
           type="search"
           name="cari"
           id="cari"
-          className="bg-transparent rounded border-white grow mx-2"
+          className="bg-transparent rounded border-white border grow mx-2"
         />
         <button className="w-10 h-10 mx-2">
           <img className="w-fit h-fit" src="/images/keranjang.png" alt="" />
@@ -33,72 +34,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="carouselExampleCaptions" className="carousel slide">
-        <div className="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            className="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img
-              src="/images/Gambar slide 1.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption bg-black opacity-70 d-block d-md-block">
-              <h5>Pusat oleh-oleh Cendera Mata Asli Kalimantan Timur</h5>
-              <p>100% Buatan Lokal</p>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img
-              src="/images/Gambar slide 2.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
-            <div className="carousel-caption bg-black opacity-70 d-block d-md-block">
-              <h5>Dari pengrajin untuk anda</h5>
-              <p>100% Buatan Lokal</p>
-            </div>
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+      <Carousel/>
       <div className="grid grid-cols-3 gap-4 p-4 mb-24">
         <Card
           sourceGambarProduk="/images/Produk/1.png"
