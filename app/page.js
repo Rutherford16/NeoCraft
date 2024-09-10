@@ -5,8 +5,8 @@ import dataProduct from "./json/data-product.json";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-[#e6d4cc]">
-      <nav className="navbar sticky-top navbar-expand-sm bg-[#8a5338]">
+    <main className="min-h-screen bg-[#e6d4cc]">
+      <nav className="navbar sticky-top navbar-expand-sm flex flex-row bg-[#8a5338]">
         <img className="w-10 h-10" src="/images/logo.png" alt="Logo" />
         <div className="input-group mx-2 rounded-xl text-white border-white border">
           <span
