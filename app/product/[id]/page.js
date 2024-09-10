@@ -9,7 +9,10 @@ export default function Product({ params: { id } }) {
     <main className="relative min-h-screen bg-[#e6d4cc] border border-black">
       <div className="w-full h-fit p-2 fixed top-3 flex flex-row justify-between items-center bg-transparent text-white">
         <div>
-          <Link href={"/"} className="rounded-full py-2 px-2.5 bg-[#8a5338] text-4xl">
+          <Link
+            href={"/"}
+            className="rounded-full py-2 px-2.5 bg-[#8a5338] text-4xl"
+          >
             <i className="bi bi-arrow-left"></i>
           </Link>
         </div>
@@ -45,12 +48,12 @@ export default function Product({ params: { id } }) {
           height={0}
           alt="{namaProduk}"
         />
-        <div className="flex flex-row justify-between items-center px-3 bg-[#8a5338] rounded-full text-white">
+        <div className="flex flex-row justify-between items-center mb-3 px-3 bg-[#8a5338] rounded-full text-white">
           <div>Deskripsi</div>
           <img className="w-10 h-auto" src="/images/keranjang.png" alt="" />
           <div>Review</div>
         </div>
-        <div className="flex flex-row justify-between items-center px-3">
+        <div className="flex flex-row justify-between items-center px-3 mb-3">
           <div className="">
             <h3 className="text-lg font-bold">{data.namaProduct}</h3>
             Rp. {data.hargaProduct}
@@ -61,22 +64,22 @@ export default function Product({ params: { id } }) {
             </button>
           </div>
         </div>
-        <div className="px-3">
+        <div className="px-3 mb-3">
           <h3 className="text-lg font-bold">Ukuran</h3>
-          <div className="flex flex-row justify-between">
-            <button className="py-2 px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
+          <div className="w-full flex flex-row justify-between">
+            <button className="py-2 px-3 sm:px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
               S
             </button>
-            <button className="py-2 px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
+            <button className="py-2 px-3 sm:px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
               M
             </button>
-            <button className="py-2 px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
+            <button className="py-2 px-3 sm:px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
               L
             </button>
-            <button className="py-2 px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
+            <button className="py-2 px-3 sm:px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
               XL
             </button>
-            <button className="py-2 px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
+            <button className="py-2 px-3 sm:px-10 border-black border-1 focus:outline-none focus:ring focus:ring-[#8a5338]">
               XXL
             </button>
           </div>
