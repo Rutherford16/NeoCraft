@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  @font-face {
+    font-family: ebson;
+    src: url('/fonts/ebson/Ebson-PERSONAL-USE-ONLY.ttf');
+  }
+}

@@ -5,7 +5,7 @@ import dataProduct from "./json/data-product.json";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-[#e6d4cc] border border-black">
+    <main className="relative min-h-screen bg-[#e6d4cc]">
       <nav className="navbar sticky-top navbar-expand-sm bg-[#8a5338]">
         <img className="w-10 h-10" src="/images/logo.png" alt="Logo" />
         <div className="input-group mx-2 rounded-xl text-white border-white border">
@@ -57,11 +57,6 @@ export default function Home() {
           <div className="offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
                 <a className="nav-link" href="#">
                   Link
                 </a>
@@ -98,17 +93,6 @@ export default function Home() {
                 </ul>
               </li>
             </ul>
-            <form className="d-flex mt-3" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
