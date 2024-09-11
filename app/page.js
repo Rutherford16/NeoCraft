@@ -13,7 +13,7 @@ export default function Welcome() {
           <img className="w-16 h-auto" src="/images/logo.png" alt="Logo" />
         </div>
         <div
-          className="progress w-1/12 mt-3 bg-[#F2F0EB]"
+          className="progress w-1/4 sm:w-1/12 mt-3 bg-[#F2F0EB]"
           role="progressbar"
           aria-label="Loading progress"
           aria-valuenow="25"
