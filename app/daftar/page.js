@@ -27,7 +27,7 @@ export default function Daftar() {
           dan tunjukkan kepada dunia pesona asli Kalimantan Timur.
         </p>
         <button className="w-full mt-8 py-3 bg-[#F2F0EB] rounded-lg text-[#3F2716] text-xl font-bold">
-          Mulai Sekarang
+          Daftar Sekarang
           <i class="pl-2 bi bi-arrow-right"></i>
         </button>
       </div>
