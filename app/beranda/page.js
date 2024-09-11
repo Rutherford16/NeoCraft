@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Card from "./components/card";
-import Carousel from "./components/carousel";
-import dataProduct from "./json/data-product.json";
+import Card from "../components/card";
+import Carousel from "../components/carousel";
+import dataProduct from "../json/data-product.json";
 
-export default function Home() {
+export default function Beranda() {
   return (
     <main className="min-h-screen bg-[#e6d4cc]">
       <nav className="navbar sticky-top navbar-expand-sm bg-[#8a5338]">
